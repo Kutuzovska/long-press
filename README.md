@@ -1,4 +1,4 @@
-# Long press
+# Vanilla-long-press
 
 Detected long press
 
@@ -8,26 +8,28 @@ Detected long press
 
 # Installation
 
-    npm install long-press
+    npm install vanilla-long-press
 
 # Usage
+
 ```html
-    <div>
-        <input id="my-input">
-    </div>
+<div>
+  <input id="my-input" />
+</div>
 
-    <script>
-        import LongPress from 'long-press';
+<script>
+  import LongPress from "long-press";
 
-        const inputElement = document.getElementById('my-input');
-        const cb = (event) => {
-            console.log('Long press detected!');
-        };
-        const longPress = new LongPress(inputElement, cb, 1000);
+  const inputElement = document.getElementById("my-input");
+  const cb = (event) => {
+    console.log("Long press detected!");
+  };
+  const longPress = new LongPress(inputElement, cb, 1000);
 
-        setTimeout(() => longPress.destroy(), 5000);
-    </script>
+  setTimeout(() => longPress.destroy(), 5000);
+</script>
 ```
+
 # License
 
 <a href="https://github.com/Kutuzovska/long-press/LICENSE">MIT</a> License

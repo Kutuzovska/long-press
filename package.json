@@ -1,5 +1,5 @@
 {
-  "name": "long-press",
+  "name": "vanilla-long-press",
   "version": "1.0.0",
   "description": "Listener for detected long press",
   "main": "index.js",

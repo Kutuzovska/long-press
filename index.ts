@@ -1,5 +1,5 @@
 /*
- * Project: long-press
+ * Project: vanilla-long-press
  * Created Date: Friday November 26th 2021
  * Author: Churkin Nikolay
  * Emaul: nc19091997@gmail.com
