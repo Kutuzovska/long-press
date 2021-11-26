@@ -34,7 +34,7 @@ export default class LongPress {
     const element = this as unknown as Input;
 
     if (element._longPressTimer === null) {
-      element._longPressTimer = setTimeout(() => {
+      element._longPressTimer = window.setTimeout(() => {
         if (element === document.activeElement) element._longPressCallBack(event);
         element._longPressStop(event);
       }, element._longPressDelay);
