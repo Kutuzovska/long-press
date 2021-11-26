@@ -1,6 +1,6 @@
 # Long press
 
-## Detected long press
+Detected long press
 
 # Features
 
@@ -11,7 +11,7 @@
     npm install long-press
 
 # Usage
-
+```html
     <div>
         <input id="my-input">
     </div>
@@ -27,7 +27,7 @@
 
         setTimeout(() => longPress.destroy(), 5000);
     </script>
-
+```
 # License
 
 <a href="https://github.com/Kutuzovska/long-press/LICENSE">MIT</a> License
