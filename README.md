@@ -32,4 +32,4 @@ Detected long press
 
 # License
 
-<a href="https://github.com/Kutuzovska/long-press/LICENSE">MIT</a> License
+<a href="https://raw.githubusercontent.com/Kutuzovska/long-press/main/LICENSE">MIT</a> License
