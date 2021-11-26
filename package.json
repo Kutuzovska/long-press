@@ -1,0 +1,29 @@
+{
+  "name": "long-press",
+  "version": "1.0.0",
+  "description": "Listener for detected long press",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc index.ts && uglifyjs -c -m --mangle-props --no-annotations -o index.js  index.js  && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kutuzovska/long-press.git"
+  },
+  "keywords": [
+    "long",
+    "press",
+    "vue",
+    "directive"
+  ],
+  "author": "Kutuzovska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kutuzovska/long-press/issues"
+  },
+  "homepage": "https://github.com/Kutuzovska/long-press#readme",
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "uglify-js": "^3.14.3"
+  }
+}
