@@ -8,7 +8,7 @@
 
 type CallBack = (event: KeyboardEvent) => void;
 
-interface Input extends HTMLInputElement {
+export interface Input extends HTMLInputElement {
   _longPressTimer: number | null;
   _longPressDelay: number;
   _longPressCallBack: CallBack;
