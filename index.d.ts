@@ -1,4 +1,4 @@
-declare type CallBack = (event: KeyboardEvent) => void;
+declare type CallBack = (event: PointerEvent) => void;
 export interface Input extends HTMLInputElement {
     _longPressTimer: number | null;
     _longPressDelay: number;

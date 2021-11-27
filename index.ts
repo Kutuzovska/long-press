@@ -6,7 +6,7 @@
  * Copyright (c) 2021 Kutuzovksa
  */
 
-type CallBack = (event: KeyboardEvent) => void;
+type CallBack = (event: PointerEvent) => void;
 
 export interface Input extends HTMLInputElement {
   _longPressTimer: number | null;
@@ -28,11 +28,11 @@ export default class LongPress {
     this.element._longPressDelay = delay;
     this.element._longPressDestroy = this.destroy(this.element);
 
-    this.element.addEventListener('keydown', this.element._longPressStart);
-    this.element.addEventListener('keyup', this.element._longPressStop);
+    this.element.addEventListener('pointerdown', this.element._longPressStart);
+    this.element.addEventListener('pointerup', this.element._longPressStop);
   }
 
-  private start(event: KeyboardEvent): void {
+  private start(event: PointerEvent): void {
     const element = this as unknown as Input;
 
     if (element._longPressTimer === null) {
@@ -52,8 +52,8 @@ export default class LongPress {
 
   private destroy(element: HTMLInputElement): () => void {
     return () => {
-      element.removeEventListener('keydown', this.start);
-      element.removeEventListener('keyup', this.stop);
+      element.removeEventListener('pointerdown', this.start);
+      element.removeEventListener('pinterup', this.stop);
     };
   }
 }
