@@ -14,6 +14,7 @@ interface Input extends HTMLInputElement {
   _longPressCallBack: CallBack;
   _longPressStart: CallBack;
   _longPressStop: CallBack;
+  _longPressDestroy: () => void;
 }
 
 export default class LongPress {
@@ -25,9 +26,10 @@ export default class LongPress {
     this.element._longPressStart = this.start;
     this.element._longPressStop = this.stop;
     this.element._longPressDelay = delay;
+    this.element._longPressDestroy = this.destroy(this.element);
 
-    this.element.addEventListener("keydown", this.element._longPressStart);
-    this.element.addEventListener("keyup", this.element._longPressStop);
+    this.element.addEventListener('keydown', this.element._longPressStart);
+    this.element.addEventListener('keyup', this.element._longPressStop);
   }
 
   private start(event: KeyboardEvent): void {
@@ -48,8 +50,10 @@ export default class LongPress {
     element._longPressTimer = null;
   }
 
-  public destroy() {
-    this.element.removeEventListener("keydown", this.start);
-    this.element.removeEventListener("keyup", this.stop);
+  private destroy(element: HTMLInputElement): () => void {
+    return () => {
+      element.removeEventListener('keydown', this.start);
+      element.removeEventListener('keyup', this.stop);
+    };
   }
 }

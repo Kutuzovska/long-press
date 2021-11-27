@@ -4,6 +4,6 @@ export default class LongPress {
     constructor(element: HTMLInputElement, cb: CallBack, delay?: number);
     private start;
     private stop;
-    destroy(): void;
+    private destroy;
 }
 export {};

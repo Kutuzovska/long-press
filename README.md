@@ -24,9 +24,9 @@ Detected long press
   const cb = (event) => {
     console.log("Long press detected!");
   };
-  const longPress = new LongPress(inputElement, cb, 1000);
+  new LongPress(inputElement, cb, 1000);
 
-  setTimeout(() => longPress.destroy(), 5000);
+  setTimeout(() => inputElement._longPressDestroy(), 5000);
 </script>
 ```
 
