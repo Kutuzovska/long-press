@@ -53,7 +53,7 @@ export default class LongPress {
   private destroy(element: HTMLInputElement): () => void {
     return () => {
       element.removeEventListener('pointerdown', this.start);
-      element.removeEventListener('pinterup', this.stop);
+      element.removeEventListener('pointerup', this.stop);
     };
   }
 }
